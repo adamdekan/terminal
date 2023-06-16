@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="{% static 'base.css' %}" />
+        <link rel="shortcut icon"
+              type="image/png"
+              href="{% static 'favicon.png' %}" />
+        <title>Terminal Station</title>
+    </head>
+    <body>
+        <pre><output>> Let me check your PING<br />
+            {{ ping_result }}
+            <div id="message-container"></div>
+        </output></pre>
+        <script src={% static 'base.js' %}></script>
+    </body>
+</html>

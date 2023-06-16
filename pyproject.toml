@@ -1,0 +1,5 @@
+[tool.djlint]
+ignore="H014,H015,T002,H021,T003,H017,H006,H013,H030,H031"
+
+[tool.ruff]
+ignore = ["E501"]
