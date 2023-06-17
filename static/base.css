@@ -6,7 +6,7 @@ body {
   overflow: hidden;
   padding: 2rem;
   color: white;
-  font: 1.3rem Inconsolata, monospace;
+  font: 1rem Inconsolata, monospace;
   text-shadow: 0 0 5px #c8c8c8;
   &::after {
     content: "";
@@ -31,4 +31,21 @@ body {
 }
 pre {
   margin: 0;
+}
+.item {
+  text-align: left;
+  padding: 10px;
+}
+
+.main-dev {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  height: 100%;
+  border: solid rgba(119, 119, 119, 0.397) 1px;
+}
+
+.item3 {
+  grid-column: 1 / 3;
+  /* or grid-column: 1 / span 2 */
 }

@@ -2,8 +2,8 @@
 {% load static %}
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" type="text/css" href="{% static 'base.css' %}" />
         <link rel="shortcut icon"
               type="image/png"
@@ -11,10 +11,18 @@
         <title>Terminal Station</title>
     </head>
     <body>
-        <pre><output>> Let me check your PING<br />
-            {{ ping_result }}
-            <div id="message-container"></div>
+        <div class="main-dev">
+            <div class="item">
+                <pre><output>> Let me check your IP address first..<br />
+                {{ hostname }}
+                <div id="message-container"></div>
+            </div>
+            <div class="item"><pre><output><div id="ping-container">Loading data...</div></output></pre>
+            </div>
         </output></pre>
-        <script src={% static 'base.js' %}></script>
-    </body>
+    </div>
+    <script src="https://unpkg.com/htmx.org@1.9.2"></script>
+    <script src="https://unpkg.com/htmx.org/dist/ext/ws.js"></script>
+    <script src={% static 'base.js' %}></script>
+</body>
 </html>
